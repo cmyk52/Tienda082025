@@ -1,0 +1,57 @@
+body {
+    background-color:#909090;
+    color: aliceblue;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.box{
+    background-color: rgb(117, 117, 117);
+}
+
+
+.article{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    
+}
+.carrito{
+    width: 350px;
+}
+.carritoHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.articulosCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+.articulosCarrito > p{
+    padding-right: 20px;
+    
+    
+}
+
+.IrAPagar{
+    margin-top: 10px;
+}
+
+.printTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.printTotal > p{
+    padding: 0;
+    margin: 0;
+}

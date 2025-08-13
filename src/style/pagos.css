@@ -1,0 +1,11 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(61, 61, 61);
+    color: rgb(196, 196, 196);
+}
+
+a{
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+}

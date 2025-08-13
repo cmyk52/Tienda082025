@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <script type="module" async src="./script/index.js"></script>
+    <script type="module" async src="./script/carrito.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    
+</head>
+<body>
+
+    <h1>Tienda de Cartas MTG</h1>
+
+    <div class="container" id="container">
+        <article class="article">
+        <div class="box" id="box">
+            <h2>Productos</h2>
+        </div>
+
+        <div class="carrito">
+            <h2>Carrito</h2>
+            <div class="carritoHeader">
+            <p>Productos en el carrito</p><p class="productosCanasta" id="productosCanasta"></p>
+            </div>
+            <article id="productosImpresos">
+                <article id="articulosCarrito"></article>
+            </article>
+
+            <article class="printTotal">
+            <p>Total</p> <p id="printTotal"></p>
+            </article>
+            <article>
+            <a href="pago.html" ><button class="IrAPagar">Ir a pagar</button></a> <button id="limpiar">Borrar carrito</button>
+            </article>
+
+            
+        </div>
+        </article>
+    </div>
+    
+</body>
+</html>

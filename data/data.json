@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "sku": "MTG-DRM-001",
+    "nombre": "Force of Will",
+    "edicion": "Dominaria Remastered",
+    "precio": 45000,
+    "stock": 2
+  },
+  {
+    "id": 2,
+    "sku": "MTG-MH2-002",
+    "nombre": "Ragavan, Nimble Pilferer",
+    "edicion": "Modern Horizons 2",
+    "precio": 60000,
+    "stock": 1
+  },
+  {
+    "id": 3,
+    "sku": "MTG-BRO-003",
+    "nombre": "Mishra's Bauble",
+    "edicion": "The Brothers' War",
+    "precio": 8500,
+    "stock": 5
+  },
+  {
+    "id": 4,
+    "sku": "MTG-CMM-004",
+    "nombre": "Dockside Extortionist",
+    "edicion": "Commander Masters",
+    "precio": 38000,
+    "stock": 3
+  },
+  {
+    "id": 5,
+    "sku": "MTG-WOE-005",
+    "nombre": "Beseech the Mirror",
+    "edicion": "Wilds of Eldraine",
+    "precio": 27000,
+    "stock": 4
+  }
+]
