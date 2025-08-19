@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" async src="pago.js"></script>
+    <script type="module" async src="./script/pago.js"></script>
     <link rel="stylesheet" href="./style/pagos.css">
     <title>Pago</title>
 </head>
@@ -11,24 +11,36 @@
     <header> <h1>Realizar pago</h1> <a href="index.html">Volver al inicio</a></header>
 
     <form id="datos">
-        <label for="datos"><h2>Formulario de datos</h2></label>
-        <label for="nombre">Nombre</label>
-        
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+  <h2>Formulario de datos</h2>
+  <span id="error"></span>
 
-        <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
-        <label for="direccion">Direccion</label>
-        <input type="text" name="direccion" id="direccion" placeholder="Direccion">
+  <label for="apellido">Apellido</label>
+  <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
 
-        <label for="numeral">#</label>
-        <input type="text" name="numeral" id="numeral" placeholder="#">
-        
+  <label for="direccion">Dirección</label>
+  <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
 
-        <button type="submit">Pagar</button>
-    </form>
-   
+  <label for="numeral">N°</label>
+  <input type="text" name="numeral" id="numeral" placeholder="#" required>
+
+  <label for="telefono">Teléfono</label>
+  <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
+
+  <label for="correo">Correo</label>
+  <input type="email" name="correo" id="correo" placeholder="correo@email.com" required>
+
+  <label for="entrega">Método de entrega</label>
+  <select name="entrega" id="entrega" required>
+    <option value="" disabled selected>Selecciona una opción</option>
+    <option value="despacho">Despacho a domicilio</option>
+    <option value="retiro">Retiro en tienda</option>
+  </select>
+
+  <button type="submit" id="submit">Pagar</button>
+</form>
     
 </body>
 </html>
