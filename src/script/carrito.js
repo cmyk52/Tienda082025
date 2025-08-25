@@ -1,5 +1,7 @@
 // Imprimir carrito
 
+
+
 export function printCarrito(){
 
     const data = JSON.parse(localStorage.getItem('consolidado')) || []
@@ -61,6 +63,10 @@ function limpiarCarrito(){
     btnLimpiarCarrito.addEventListener('click',(e)=>{
     localStorage.removeItem('consolidado')
     localStorage.removeItem('productosSeleccionados')
+
+    const productosCanasta = document.getElementById('productosCanasta')
+
+    productosCanasta.innerHTML = 0
     
     printCarrito()
     

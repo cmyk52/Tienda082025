@@ -52,6 +52,7 @@ function validacionDatos(datosEvaluados){
         console.log('faltan datos')
         html += 'Faltan campos por completar'
         msjAlert.innerHTML = html
+        return
 
     } 
     

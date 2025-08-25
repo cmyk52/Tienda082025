@@ -1,12 +1,6 @@
 const url = 'http://localhost:3000/carta'
 import { printCarrito } from "./carrito.js"
 
-
-// Variantes globales
-
-
-
-
 // Fetch
 
 async function getData(){
@@ -63,6 +57,8 @@ function agregarCarrito(){
     const seleccion = productosImpresos.querySelectorAll("button")
     
     let productosAgregados = []
+
+    
     
     
     
@@ -75,15 +71,14 @@ function agregarCarrito(){
             const edicion = e.target.dataset.edicion;
             const seleccionados = {sku, nombre, precio, edicion}
 
-            const memoria = JSON.parse(localStorage.getItem('productosSeleccionados'))
+            const memoria = JSON.parse(localStorage.getItem('productosSeleccionados')) || []
             console.log(memoria)
 
-            productosAgregados.push(seleccionados)
-
-            
+                   
 
             if(!memoria){
                 localStorage.setItem('productosSeleccionados', JSON.stringify(productosAgregados))
+                consolidarCarrito()
                 
                 
             }
