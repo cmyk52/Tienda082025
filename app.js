@@ -1,10 +1,11 @@
-console.log("Hola mundo");
-
 import express from 'express';
 import cors from 'cors';
-import data from './data/data.json' assert {type:'json'}
+import routerPago from './rutas/pago.js'
+import routerCarta from './rutas/carta.js'
+
 const app = express();
 const PORT = 3000;
+
 
 
 
@@ -15,33 +16,10 @@ app.use(express.json()); //JSON
 
 
 //Routes
-app.get("/saludo", (req,res) => {
-    res.status(200).send({mensaje:"Hola Jose"})
-    
-})
 
-app.get("/carta", (req,res)=>{
-    
-    const articulos = data
-    res.status(200).json(articulos)    
+app.use("/carta", routerCarta)
+app.use("/pago", routerPago)
 
-})
-
-app.post("/carta", (req,res)=>{
-    
-
-    const {nombre, color} = req.body
-    if(!nombre || !color){
-        res.status(400).json("faltan parametros")
-        return
-        
-    }
-    res.status(200).json({name: nombre, color: color})
-    
-
-    
-
-})
 
 //Error handling
 app.use((req,res)=>{

@@ -35,7 +35,7 @@ function validacionDatos(datosEvaluados){
 
     const msjAlert = document.getElementById('error')
     let html = ''
-    console.log(msjAlert)
+
 
 
     if( datosEvaluados.nombre === '' || 
@@ -49,20 +49,66 @@ function validacionDatos(datosEvaluados){
         
         {
 
-        console.log('faltan datos')
+
         html += 'Faltan campos por completar'
         msjAlert.innerHTML = html
         return
 
     } 
     
-    else 
-        {
-        console.log('valores ok')
-        html += ''
-        msjAlert.innerHTML = html
+
+
+        
+        postDatos(datosEvaluados) 
+
+
+}
+
+async function postDatos(datosEvaluados){
+    const productosPagados = JSON.parse(localStorage.getItem('consolidado'))
+    const datosContacto = datosEvaluados
+
+    const consolidadoPago = {
+        datosContacto: datosContacto,
+        productosPagados: productosPagados
     }
 
+
+
+    const url = 'http://localhost:3000/pago'
+
+    try{ 
+        const res = await fetch(url, {
+        method: 'POST',
+        headers:{
+            'Content-type': 'application/json'
+        },
+
+        body: JSON.stringify({
+
+            consolidadoPago
+        })
+
+        
+
+    })
+    const response = await res.json()
+    console.log(response)
+    console.log('succes')
+
+        alert('Pago exitoso')
+        
+
+
+    return
+
+}
+    catch(err) {
+        
+        console.log(err)
+        return
+    }
+   
 
 }
 
